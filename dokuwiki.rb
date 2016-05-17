@@ -16,8 +16,8 @@ link '/var/www/html/wiki' do
   to '/usr/share/dokuwiki'
 end
 
-template '/etc/cron.daily/dokuwiki-backup.sh' do
-  source "#{Env['HOME']}/DokuWiki/backup.sh"
+file '/etc/cron.daily/dokuwiki-backup.sh' do
+  content "#test"
   owner 'root'
   group 'root'
   mode '0755'
