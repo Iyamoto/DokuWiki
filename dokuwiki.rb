@@ -17,7 +17,7 @@ link '/var/www/html/wiki' do
 end
 
 remote_file '/etc/cron.daily/dokuwiki-backup.sh' do
-  source 'https://raw.githubusercontent.com/Iyamoto/DokuWiki/master/backup.sh'
+  source 'file:///home/master/DokuWiki/backup.sh'
   owner 'root'
   group 'root'
   mode '0755'
