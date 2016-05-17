@@ -16,8 +16,8 @@ link '/var/www/html/wiki' do
   to '/usr/share/dokuwiki'
 end
 
-remote_file '/etc/cron.daily/dokuwiki-backup.sh' do
-  source 'file:///home/master/DokuWiki/backup.sh'
+remote_file '/etc/cron.daily/dokuwiki-backup' do
+  source "file:///#{ENV['HOME']}/DokuWiki/backup.sh"
   owner 'root'
   group 'root'
   mode '0755'
