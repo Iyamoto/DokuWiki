@@ -16,6 +16,13 @@ link '/var/www/html/wiki' do
   to '/usr/share/dokuwiki'
 end
 
+template '/etc/cron.daily/dokuwiki-backup.sh' do
+  source 'backup.sh'
+  owner 'root'
+  group 'root'
+  mode '0755'
+end
+
 service "apache2" do
   action :restart
 end
