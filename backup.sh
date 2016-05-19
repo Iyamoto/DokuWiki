@@ -1,3 +1,5 @@
+#!/bin/bash
+
 #Ubuntu DokuWiki backup script
 
 BACKUPPATH="/var/www/html/backups"
